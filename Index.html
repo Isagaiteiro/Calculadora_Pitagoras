@@ -11,14 +11,28 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li>Pitágoras</li>
-            <li>Calculadora</li>
-            <li>Inventor</li>
-            <li>Sobre</li>
-        </ul>
-    </nav>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#">Pitágoras</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Calculadora</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Inventor</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sobre</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
     <header>
         <h1 class="title-header">Pitágoras</h1>
         <p class="text-header">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum quidem similique sapiente repudiandae iusto veritatis esse suscipit ipsam nulla nam molestias dolores ab iure veniam minus in exercitationem, nisi recusandae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati recusandae exercitationem adipisci dolores accusamus animi, architecto alias necessitatibus maxime aliquam perferendis dignissimos deserunt iusto reiciendis harum molestias voluptate nemo debitis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero recusandae dolore tenetur delectus quo impedit possimus placeat doloremque ipsam quos repudiandae, atque vel, totam id provident dolor deserunt quibusdam nihil!Lorem</p>
@@ -36,26 +50,34 @@
             <!--Espaço para colocar os botões-->
             <div class="card-body">
                 <div class="collumn">
+                        <button id="bt-num-7" type="button" class="btn btn-light btn-block">7</button>
+                        <button id="bt-num-4" type="button" class="btn btn-light btn-block">4</button>
                         <button id="bt-num-1" type="button" class="btn btn-light btn-block">1</button>
-                        <button id="bt-num-2" type="button" class="btn btn-light btn-block">4</button>
-                        <button id="bt-num-3" type="button" class="btn btn-light btn-block">7</button>
+                        
                 </div>
                 <div class="collumn">
-                        <button id="bt-num-4" type="button" class="btn btn-light btn-block">2</button>
+                        <button id="bt-num-8" type="button" class="btn btn-light btn-block">8</button>
                         <button id="bt-num-5" type="button" class="btn btn-light btn-block">5</button>
-                        <button id="bt-num-6" type="button" class="btn btn-light btn-block">8</button>
+                        <button id="bt-num-2" type="button" class="btn btn-light btn-block">2</button>
+                        <button id="bt-num-0" type="button" class="btn btn-light btn-block">0</button>
                 </div>
                 <div class="collumn">
-                        <button id="bt-num-7" type="button" class="btn btn-light btn-block">3</button>
+                        <button id="bt-num-7" type="button" class="btn btn-light btn-block">9</button>
                         <button id="bt-num-8" type="button" class="btn btn-light btn-block">6</button>
-                        <button id="bt-num-9" type="button" class="btn btn-light btn-block">9</button>
+                        <button id="bt-num-9" type="button" class="btn btn-light btn-block">3</button>
+                        <button id="bt-num-ponto" type="button" class="btn btn-warning btn-block">.</button>
+                        <button id="bt-op-sqrt" type="button" class="btn btn-warning btn-block">sqrt()</button>
+                        
                 </div>
                 <div class="collumn">
-                        <button id="bt-op-ac" type="button" class="btn btn-warning btn-block">AC</button>
-                        <button id="bt-op-ponto" type="button" class="btn btn-warning btn-block">,</button>
+                        <button id="bt-op-divi" type="button" class="btn btn-warning btn-block">/</button>
+                        <button id="bt-op-mult" type="button" class="btn btn-warning btn-block">*</button>
+                        <button id="bt-op-sub" type="button" class="btn btn-warning btn-block">-</button>
+                        <button id="bt-op-sum" type="button" class="btn btn-warning btn-block">+</button>
                         <button id="bt-op-equal" type="button" class="btn btn-warning btn-block">=</button>
                 </div>
             </div>
+            <!--<button id="bt-op-ac" type="button" class="btn btn-warning btn-block">AC</button>-->
         </div>
     </article>
     <div class="autor">
