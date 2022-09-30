@@ -38,15 +38,6 @@ const calcular = () => {
                 atualizarDisplay(Math.sqrt(h));
             break;*/
         }
-        /*
-        if(operador == '+'){
-            console.log(numeroAtual);
-            console.log(numeroAnterior);
-            //resultado = Math.pow(numeroAnterior, 2) + Math.pow(numeroAtual, 2);
-            atualizarDisplay(numeroAnterior + numeroAtual);
-            
-        } */
-
     }
 }
 
@@ -83,11 +74,3 @@ operadores.forEach (operador => operador.addEventListener('click',selcionarOpera
 
 console.log (numeros);
 console.log (operadores);
-/*
-const digito = (n) => {
-
-}
-c1 = 9; 
-c2 = 12; 
-h = Math.pow(c1, 2) + Math.pow(c2, 2); 
-//alert(Math.sqrt(h)); */
