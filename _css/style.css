@@ -125,7 +125,6 @@ article h2{
     width: 100px;
     font-weight: bold;
     font-size: 16pt;
-
 }
 
 .collumn{
@@ -133,6 +132,41 @@ article h2{
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    
+}
 
+page-content-autor{
+    width: 953px;
+    background-color: #015B3F;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.autor{
+    height: 700px;
+    padding: 0px 40px 0px 40px;
+    background-color: white;
+}
+
+.text p{
+    width: 400px;
+}
+.box3{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.picture-pitagoras {
+    width: 400px;
+    max-height: 450px;
+    border-radius: 50%;
+}
+
+footer{
+    max-height: 400px;
+    display: flex;
+    align-items: center;
+    background-color: #015B3F;
+    color: white;
 }

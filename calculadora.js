@@ -2,17 +2,15 @@
 
 const display = document.getElementById('display');
 
-//selecionar qualquer elemento que tenha como parte do atributo 'bt'.
+//selecionar qualquer elemento que tenha como parte do atributo 'bt-num-'.
 const numeros = document.querySelectorAll('[id*=bt-num]');
 
+//selecionar qualquer elemento que tenha como parte do atributo 'bt-op-'.
 const operadores = document.querySelectorAll('[id*=bt-op-]');
-
-const limpar = document.querySelectorAll('bt-op-ac');
 
 let novoNumero = true;
 let operador;
 let numeroAnterior;
-let h;
 
 const operacaoPendente = () => operador !== undefined;
 
@@ -32,24 +30,26 @@ const calcular = () => {
             break;
             case '/':
                 atualizarDisplay(numeroAnterior / numeroAtual);
+            break; 
+            case 'x^':
+                atualizarDisplay(numeroAnterior*numeroAnterior);
             break;
-            /*case 'sqrt()':
-                h = Math.pow(numeroAnterior, 2) + Math.pow(numeroAtual, 2);
-                atualizarDisplay(Math.sqrt(h));
-            break;*/
+            case 'sqrt()':
+                atualizarDisplay(Math.sqrt(numeroAnterior));
+            break;
         }
     }
-}
+};
 
 const atualizarDisplay = (texto) => {
     if(novoNumero){
-        display.textContent = texto;
+        display.textContent = texto.toLocaleString('BR');
         novoNumero = false;
     } else {
-        display.textContent += texto;
+        display.textContent += texto.toLocaleString('BR');
     }
-    
-}
+};
+
 //Manda para o atualizar display, o texto que está dentro de cada botão.
 const inserirNumero = (evento) => atualizarDisplay(evento.target.textContent);
 
@@ -66,11 +66,49 @@ const selcionarOperador = (evento) => {
         numeroAnterior = parseFloat(display.textContent);
     }
     
-}
+};
 
 operadores.forEach (operador => operador.addEventListener('click',selcionarOperador));
 
+const ativarIgual = () => {
+    calcular();
+    operador = undefined;
+};
 
+document.getElementById('bt-op-equal').addEventListener('click', ativarIgual);
+
+const limparDisplay = () => (display.textContent = '0');
+document.getElementById('bt-op-ce').addEventListener('click', limparDisplay);
+
+const limparCalculo = () => {
+    limparDisplay();
+    operador = undefined;
+    novoNumero = true;
+    numeroAnterior = undefined;
+};
+document
+    .getElementById('bt-op-ce')
+    .addEventListener('click', limparCalculo);
+
+const removerUltimoNumero = () =>
+    (display.textContent = display.textContent.slice(0, -1));
+document
+    .getElementById('bt-op-c')
+    .addEventListener('click', removerUltimoNumero);
+
+
+const existeDecimal = () => display.textContent.indexOf('.') !== -1;
+const existeValor = () => display.textContent.length > 0;
+const inserirDecimal = () => {
+    if (!existeDecimal()) {
+        if (novoNumero) {
+            atualizarDisplay('0.');
+        } else {
+            atualizarDisplay('.');
+        }
+    }
+};
+document.getElementById('bt-num-ponto').addEventListener('click', inserirDecimal);
 
 console.log (numeros);
 console.log (operadores);
