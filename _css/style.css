@@ -3,15 +3,107 @@
     padding: 0px;
     text-decoration: none;
     list-style-type: none;
-    /*max-width: 100%;
-    min-height: 100%;*/
     font-size: 15px;
+    width: 100%;
     font-family: Arial, Helvetica, sans-serif;
-         
+    
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-content{  
+    width: 953px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #015B3F;
+    
+}
+
+header{
+    height: 800px;
+    width: 953px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: white;
+    
+}
+
+.image-header{
+    width: 953px;
+    max-height: 200px;
+    
+}
+
+header h1{
+    padding: 0px 40px 0px 40px;
+}
+header p{
+    
+    text-align: center;
+ 
+    padding: 0px 40px 0px 40px;
+    position: relative;
+}
+
+.trianguloretangulo{
+    width: 400px;
+    max-height: 200px;
+}
+
+.box1{
+    max-height: 200px;
+    display: flex;
+    align-items: center;
+    background-color: #015B3F;
+    color: white;
+}
+
+.formula{
+    width: 400px;
+    max-height: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.box2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+article{
+    width: 953px;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 40px 0px 40px;
+}
+
+article h2{
+    color: white;
+    padding-bottom: 40px;
+    
+    
+}
+#calculadora{
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0px;
+
 }
 
 #calculadora .card-header{
-
+    min-width: 500px;
 }
 
 #calculadora .card-body{
@@ -23,15 +115,14 @@
 
 #calculadora #display{
     text-align: right;
-    width: 100%;
     font-weight: bold;
     font-size: 30pt;
 }
 
 #calculadora button{
     margin: 5px;
-    height: 3em;
-    width: 50%;
+    height: 60px;
+    width: 100px;
     font-weight: bold;
     font-size: 16pt;
 
@@ -42,6 +133,6 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    width: 100%;
+    
 
 }
