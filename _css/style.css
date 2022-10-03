@@ -25,7 +25,7 @@ body{
 }
 
 header{
-    height: 800px;
+    height: 900px;
     width: 953px;
     display: flex;
     align-items: center;
@@ -79,7 +79,7 @@ header p{
 }
 article{
     width: 953px;
-    height: 700px;
+    height: 800px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,6 +87,21 @@ article{
     padding: 0px 40px 0px 40px;
 }
 
+.main{
+    width: 873px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calc-hipotenusa{
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 article h2{
     color: white;
     padding-bottom: 40px;

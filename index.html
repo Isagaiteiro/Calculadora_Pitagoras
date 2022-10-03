@@ -2,99 +2,144 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teorema de Pitágoras</title>
-    <link rel="stylesheet" href="./_css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teorema de Pitágoras</title>
+  <link rel="stylesheet" href="./_css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a class="navbar-brand" href="index.html">Pitágoras</a>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="autor.html">Inventor</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Sobre</a>
-              </li>
-            </ul>
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" href="index.html">Pitágoras</a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="autor.html">Inventor</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sobre</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </div>
+  </nav>
+
+  <div class="page-content">
+    <img class="image-header" src="./_imagens/header.png">
+    <header class="text-header">
+      <h1 class="title-header">Teorema de Pitágoras</h1>
+      <p class="introduction-header">O teorema de Pitágoras é uma fórmula que nos permite relacionar as medidas dos
+        lados de um triângulo retângulo. Nessa figura geométrica, os lados perpendiculares são conhecidos como catetos,
+        e o lado oposto ao ângulo de 90º é conhecido como hipotenusa.
+        Esse teorema mostra que a soma do quadrado dos catetos é sempre igual ao quadrado da hipotenusa. Ele é muito
+        importante para o estudo da Matemática, auxiliando no desenvolvimento da geometria. Foi por meio dele que os
+        matemáticos buscaram compreender melhor os números irracionais.</p>
+      <div class="box1">
+        <img class="trianguloretangulo" src="./_imagens/a.jpg">
+        <p class="">Para a aplicação do teorema de Pitágoras, é necessário compreender as nomenclaturas dos lados de um
+          triângulo retângulo. O maior lado do triângulo fica sempre oposto ao maior ângulo, que é o ângulo de 90°. Esse
+          lado recebe o nome de hipotenusa e será representado aqui pela letra a.</p>
+      </div>
+      <div class="box2">
+        <p class="">O teorema de Pitágoras afirma que é válida a relação a seguir:</p>
+        <img class="formula" src="./_imagens/formula.jpg">
+        <p class="">Assim, podemos dizer que o quadrado da medida da hipotenusa é igual à soma dos quadrados das medidas
+          dos catetos.</p>
+      </div>
+      <main class="main">
+        <h1>Calculadora de Hipotenusa</h1>
+        <section class="calc-hipotenusa">
+          <form class="form" id="form">
+            <label for="ladoc">Cateto oposto<input name="co" id="ladoc" placeholder="Entre com o valor"
+                type="number" /></label>
+            <label for="ladob">Cateto adjacente<input name="ca" id="ladob" placeholder="Entre com o valor"
+                type="number" /></label>
+            <label for="hipotenusa">Hipotenusa<input disabled="disabled" me="hipotenusa" id="hipotenusa" /></label>
+            <button>Calcular</button>
+          </form>
+        </section>
+      </main>
+    </header>
+    <article>
+
+
+      <h2>Calculadora</h2>
+
+      <div class="card" id="calculadora">
+        <!--Espaço para colocar o visor-->
+        <div class="card-header">
+          <p id="display" class="m-1">0</p>
+        </div>
+
+        <!--Espaço para colocar os botões-->
+        <div class="card-body">
+          <div class="collumn">
+            <button id="bt-op-ce" type="button" class="btn btn-warning btn-block">CE</button>
+            <button id="bt-num-7" type="button" class="btn btn-light btn-block">7</button>
+            <button id="bt-num-4" type="button" class="btn btn-light btn-block">4</button>
+            <button id="bt-num-1" type="button" class="btn btn-light btn-block">1</button>
+            <button id="bt-op-c" type="button" class="btn btn-warning btn-block">C</button>
+          </div>
+          <div class="collumn">
+            <button id="bt-op-pow" type="button" class="btn btn-warning btn-block">x^</button>
+            <button id="bt-num-8" type="button" class="btn btn-light btn-block">8</button>
+            <button id="bt-num-5" type="button" class="btn btn-light btn-block">5</button>
+            <button id="bt-num-2" type="button" class="btn btn-light btn-block">2</button>
+            <button id="bt-num-0" type="button" class="btn btn-light btn-block">0</button>
+          </div>
+          <div class="collumn">
+            <button id="bt-op-sqrt" type="button" class="btn btn-warning btn-block">sqrt()</button>
+            <button id="bt-num-7" type="button" class="btn btn-light btn-block">9</button>
+            <button id="bt-num-8" type="button" class="btn btn-light btn-block">6</button>
+            <button id="bt-num-9" type="button" class="btn btn-light btn-block">3</button>
+            <button id="bt-num-ponto" type="button" class="btn btn-warning btn-block">.</button>
+          </div>
+          <div class="collumn">
+            <button id="bt-op-divi" type="button" class="btn btn-warning btn-block">/</button>
+            <button id="bt-op-mult" type="button" class="btn btn-warning btn-block">*</button>
+            <button id="bt-op-sub" type="button" class="btn btn-warning btn-block">-</button>
+            <button id="bt-op-sum" type="button" class="btn btn-warning btn-block">+</button>
+            <button id="bt-op-equal" type="button" class="btn btn-warning btn-block">=</button>
           </div>
         </div>
+      </div>
+    </article>
+  </div>
+  <div class="page-content-autor">
+    <img class="picture-pitagoras" src="./_imagens/pitagoras.jpg" alr="Imagem do autor">
+    <div class="autor">
+      <div class="text">
+        <h1>Biografia de Pitágoras</h1>
+        <div class="box3">
+          <p>Pitágoras (582 - 497 a. C.) foi um matemático e filósofo grego. Autor do "Teorema de Pitágoras": "Em um
+            triangulo retângulo, o quadrado da hipotenusa é igual à soma dos quadrados dos catetos". Desenvolveu
+            trabalhos na área da filosofia, música, moral, geografia e medicina.<br></br>Pitágoras nasceu na ilha de
+            Samos, no mar Egeu, Grécia, por volta de 582 a. C. Filho de um rico comerciante, sua vida e suas ideias são
+            uma mistura de lenda e história real.<br></br>A lenda começa antes mesmo de Pitágoras nascer, quando por
+            volta de 580 a. C. a sacerdotisa do Deus Apolo disse a sua mãe: “Tereis um filho de grande beleza e
+            extraordinária inteligência, será um dos homens mais sábios de todos os tempos”.<br></br>Lenda ou não, a
+            inteligência do jovem Pitágoras impressionava os mestres das melhores escolas de Samos, que não conseguiam
+            responder as perguntas do jovem.<br></br>Com 16 anos de idade, Pitágoras foi enviado para Mileto para
+            estudar com Tales, o maior sábio da época. Logo, Tales reconheceu que nada mais tinha que ensinar ao jovem e
+            passou ele, o mestre, a estudar as descobertas geométricas e matemáticas do aluno.</p>
         </div>
-      </nav>
-    
-    <div class="page-content">
-        <img class="image-header" src="./_imagens/header.png">
-        <header class="text-header">
-            <h1 class="title-header">Teorema de Pitágoras</h1>
-            <p class="introduction-header">O teorema de Pitágoras é uma fórmula que nos permite relacionar as medidas dos lados de um triângulo retângulo. Nessa figura geométrica, os lados perpendiculares são conhecidos como catetos, e o lado oposto ao ângulo de 90º é conhecido como hipotenusa.
-Esse teorema mostra que a soma do quadrado dos catetos é sempre igual ao quadrado da hipotenusa. Ele é muito importante para o estudo da Matemática, auxiliando no desenvolvimento da geometria. Foi por meio dele que os matemáticos buscaram compreender melhor os números irracionais.</p>
-            <div class="box1">
-                <img class="trianguloretangulo" src="./_imagens/a.jpg">
-                <p class="">Para a aplicação do teorema de Pitágoras, é necessário compreender as nomenclaturas dos lados de um triângulo retângulo. O maior lado do triângulo fica sempre oposto ao maior ângulo, que é o ângulo de 90°. Esse lado recebe o nome de hipotenusa e será representado aqui pela letra a.</p>
-            </div>
-            <div class="box2">
-            <p class="">O teorema de Pitágoras afirma que é válida a relação a seguir:</p>
-            <img class="formula" src="./_imagens/formula.jpg">
-            <p class="">Assim, podemos dizer que o quadrado da medida da hipotenusa é igual à soma dos quadrados das medidas dos catetos.</p>
-            </div>
-        </header>
-        <article>
-            
-            <h2>Calculadora</h2>
-            
-            <div class="card" id="calculadora">
-                <!--Espaço para colocar o visor-->
-                <div class="card-header">
-                    <p id="display" class="m-1">0</p>
-                </div>
-
-                <!--Espaço para colocar os botões-->
-                <div class="card-body">
-                    <div class="collumn">
-                            <button id="bt-op-ce" type="button" class="btn btn-warning btn-block">CE</button>
-                            <button id="bt-num-7" type="button" class="btn btn-light btn-block">7</button>
-                            <button id="bt-num-4" type="button" class="btn btn-light btn-block">4</button>
-                            <button id="bt-num-1" type="button" class="btn btn-light btn-block">1</button>
-                            <button id="bt-op-c" type="button" class="btn btn-warning btn-block">C</button>
-                    </div>
-                    <div class="collumn">
-                            <button id="bt-op-pow" type="button" class="btn btn-warning btn-block">x^</button>
-                            <button id="bt-num-8" type="button" class="btn btn-light btn-block">8</button>
-                            <button id="bt-num-5" type="button" class="btn btn-light btn-block">5</button>
-                            <button id="bt-num-2" type="button" class="btn btn-light btn-block">2</button>
-                            <button id="bt-num-0" type="button" class="btn btn-light btn-block">0</button>
-                    </div>
-                    <div class="collumn">
-                            <button id="bt-op-sqrt" type="button" class="btn btn-warning btn-block">sqrt()</button>
-                            <button id="bt-num-7" type="button" class="btn btn-light btn-block">9</button>
-                            <button id="bt-num-8" type="button" class="btn btn-light btn-block">6</button>
-                            <button id="bt-num-9" type="button" class="btn btn-light btn-block">3</button>
-                            <button id="bt-num-ponto" type="button" class="btn btn-warning btn-block">.</button>
-                    </div>
-                    <div class="collumn">
-                            <button id="bt-op-divi" type="button" class="btn btn-warning btn-block">/</button>
-                            <button id="bt-op-mult" type="button" class="btn btn-warning btn-block">*</button>
-                            <button id="bt-op-sub" type="button" class="btn btn-warning btn-block">-</button>
-                            <button id="bt-op-sum" type="button" class="btn btn-warning btn-block">+</button>
-                            <button id="bt-op-equal" type="button" class="btn btn-warning btn-block">=</button>
-                    </div>
-                </div>
-            </div>
-        </article>
+      </div>
     </div>
-        <footer>
-            <p class="desenvolvedor">Isabela Gaiteiro | Calculadora Pitágoras | 03/10/2022 22:21 </p>
-        </footer>
+  </div>
+  <footer>
+    <p class="desenvolvedor">Isabela Gaiteiro | Calculadora Pitágoras | 03/10/2022 22:21 </p>
+  </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-    <script src="./calculadora.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+  <script src="./calculadora.js"></script>
 </body>

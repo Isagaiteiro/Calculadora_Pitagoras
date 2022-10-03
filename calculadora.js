@@ -1,5 +1,13 @@
 'use strict';
 
+const $form = document.querySelector('form');
+
+const $ladoc = document.querySelector('#ladoc');
+
+const $ladob = document.querySelector('#ladob');
+
+const $hipotenusa = document.querySelector('#hipotenusa');
+
 const display = document.getElementById('display');
 
 //selecionar qualquer elemento que tenha como parte do atributo 'bt-num-'.
@@ -11,6 +19,45 @@ const operadores = document.querySelectorAll('[id*=bt-op-]');
 let novoNumero = true;
 let operador;
 let numeroAnterior;
+
+function calcularHipotenusa (){
+    const c=$ladoc.value
+    const b=$ladob.value
+
+    if (!b) {
+        createAlert('Insira o valor do cateto oposto');
+      } else if (!c) {
+        createAlert('Insira o valor do cateto adjacente');
+      } else if (c <= 0 || b <= 0) {
+        createAlert('Entre com valores maiores que 0');
+      } else {
+        $hipotenusa.value = Math.hypot(c, b).toFixed(2);
+      }
+}
+
+function createAlert(msg) {
+    document
+      .querySelector('body')
+      .insertAdjacentHTML('beforebegin', `<div class='alert'>${msg}</div>`);
+  
+    setTimeout(function () {
+      deleteAlert();
+    }, 3000);
+  }
+  
+function deleteAlert() {
+    const list = document.querySelectorAll('.alert');
+    for (const item of list) {
+      item.remove();
+    }
+}
+  
+$form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    calcularHipotenusa();
+});
+
+
 
 const operacaoPendente = () => operador !== undefined;
 
@@ -110,5 +157,5 @@ const inserirDecimal = () => {
 };
 document.getElementById('bt-num-ponto').addEventListener('click', inserirDecimal);
 
-console.log (numeros);
-console.log (operadores);
+
+
