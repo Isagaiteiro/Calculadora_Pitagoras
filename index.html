@@ -18,13 +18,16 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <a class="navbar-brand" href="index.html">Pitágoras</a>
+        <a class="navbar-brand" href="#">Pitágoras</a>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="autor.html">Inventor</a>
+            <a class="nav-link" href="#calc-hip">Calculadora</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Sobre</a>
+            <a class="nav-link" href="#autor">Inventor</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#desenvolvedor">Desenvolvedor</a>
           </li>
         </ul>
       </div>
@@ -35,7 +38,7 @@
   <div class="page-content">
     <img class="image-header" src="./_imagens/header.png">
     <header class="text-header">
-      <h1 class="title-header">Teorema de Pitágoras</h1>
+      <h1 id="title-header" class="title-header">Teorema de Pitágoras</h1>
       <p class="introduction-header">O teorema de Pitágoras é uma fórmula que nos permite relacionar as medidas dos
         lados de um triângulo retângulo. Nessa figura geométrica, os lados perpendiculares são conhecidos como catetos,
         e o lado oposto ao ângulo de 90º é conhecido como hipotenusa.
@@ -55,7 +58,7 @@
           dos catetos.</p>
       </div>
       <main class="main">
-        <h1>Calculadora de Hipotenusa</h1>
+        <h1 id="calc-hip">Calculadora de Hipotenusa</h1>
         <section class="calc-hipotenusa">
           <form class="form" id="form">
             <label for="ladoc">Cateto oposto<input name="co" id="ladoc" placeholder="Entre com o valor"
@@ -89,7 +92,6 @@
             <button id="bt-op-c" type="button" class="btn btn-warning btn-block">C</button>
           </div>
           <div class="collumn">
-            <button id="bt-op-pow" type="button" class="btn btn-warning btn-block">x^</button>
             <button id="bt-num-8" type="button" class="btn btn-light btn-block">8</button>
             <button id="bt-num-5" type="button" class="btn btn-light btn-block">5</button>
             <button id="bt-num-2" type="button" class="btn btn-light btn-block">2</button>
@@ -114,10 +116,10 @@
     </article>
   </div>
   <div class="page-content-autor">
-    <img class="picture-pitagoras" src="./_imagens/pitagoras.jpg" alr="Imagem do autor">
+    <h1 id="autor">Biografia de Pitágoras</h1>
     <div class="autor">
       <div class="text">
-        <h1>Biografia de Pitágoras</h1>
+        <img class="picture-pitagoras" src="./_imagens/pitagoras.jpg" alr="Imagem do autor">
         <div class="box3">
           <p>Pitágoras (582 - 497 a. C.) foi um matemático e filósofo grego. Autor do "Teorema de Pitágoras": "Em um
             triangulo retângulo, o quadrado da hipotenusa é igual à soma dos quadrados dos catetos". Desenvolveu
@@ -135,7 +137,7 @@
     </div>
   </div>
   <footer>
-    <p class="desenvolvedor">Isabela Gaiteiro | Calculadora Pitágoras | 03/10/2022 22:21 </p>
+    <p id="desenvolvedor" class="desenvolvedor">Isabela Gaiteiro | Calculadora Pitágoras | 03/10/2022 22:21 </p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"

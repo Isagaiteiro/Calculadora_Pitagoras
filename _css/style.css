@@ -15,6 +15,9 @@ body{
     align-items: center;
 }
 
+h2{
+    font-size: 40px;
+}
 .page-content{  
     width: 953px;
     display: flex;
@@ -25,7 +28,7 @@ body{
 }
 
 header{
-    height: 900px;
+    height: 1200px;
     width: 953px;
     display: flex;
     align-items: center;
@@ -45,9 +48,8 @@ header h1{
     padding: 0px 40px 0px 40px;
 }
 header p{
-    
-    text-align: center;
- 
+    display: flex;
+    align-items: center;
     padding: 0px 40px 0px 40px;
     position: relative;
 }
@@ -79,7 +81,7 @@ header p{
 }
 article{
     width: 953px;
-    height: 800px;
+    height: 700px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -96,7 +98,7 @@ article{
 }
 
 .calc-hipotenusa{
-    max-width: 500px;
+    max-width: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -104,7 +106,6 @@ article{
 }
 article h2{
     color: white;
-    padding-bottom: 40px;
     
     
 }
@@ -142,6 +143,8 @@ article h2{
     font-size: 16pt;
 }
 
+
+
 .collumn{
     display: flex;
     align-items: center;
@@ -149,20 +152,29 @@ article h2{
     flex-direction: column;
 }
 
-page-content-autor{
+.page-content-autor{
     width: 953px;
-    background-color: #015B3F;
+    height: 900px;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
     flex-direction: column;
+    padding: 0px 40px 0px 40px;
 }
 
 .autor{
-    height: 700px;
-    padding: 0px 40px 0px 40px;
+    width: 873px;
+    display: flex;
+    align-items: center;
+    
     background-color: white;
 }
 
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .text p{
     width: 400px;
 }
@@ -180,8 +192,9 @@ page-content-autor{
 
 footer{
     max-height: 400px;
-    display: flex;
-    align-items: center;
+    
+   text-align: center;
+    padding-top: 20px;
     background-color: #015B3F;
     color: white;
 }
